@@ -45,6 +45,7 @@ app.patch("/notes/:ind", (req,res)=>{
     })
 })
 
+module.exports=app
 
 
 
