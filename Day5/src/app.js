@@ -52,6 +52,3 @@ app.patch("/notes/:ind", (req,res)=>{
 module.exports=app
 // status codes are used to reflect the client about its actions..whether its action is completed or not, and what is the message we can give to the user depending on its POST of any data.
 // since we know that when we will restart our server whole of our file runs again and in our RAM when we re-run our file the location of it gets changed and the previous space also consumes space..this issue gets solved by the DATABASE, instead of using variables in our file like notes array, we create a central file/database which stores all the data..this utilizes a single space and our file gets optimized in terms of space.
-// username and password of my mongodb atlas
-//rakshitjha05_db_user
-//SeBlhsZgKUFSKiH6
