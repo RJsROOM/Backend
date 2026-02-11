@@ -1,0 +1,28 @@
+//topics covered: Authentication, authorisation, validation and verification
+
+
+
+//authentication is simply identifying the exact users for each of the requests made on server.
+
+//when only a certain permissions are given to the users based on their role and usage then that is called authorisation.
+
+//validation is chacking the format of the data for the fields from where we're taking inputs from the users.
+
+//when we check whther the data is right or wrong based on the creterions of our saved information then that is called verification.
+
+
+// when a user firstly visits our server it first registers and the data of the users can be stored in object form. the request which user makes of registering with our site gets saved into our servers' req.body and the server does these things with the submitted data of the user-- 
+1. user ka data DB me save krna.
+2. token(idcard) create krna user k lie user k data k saath.
+this token is sent to the users for future reference and if the user makes any requests in the future the token's copy is sent there which enables our authentication part easier.
+The token which a server creates for the users is also signed by the server by a JWT_SECRET code. this code is nothing but a string which is only present in our server whic helps us to reduce the forgary(illegal copy) of our token.
+
+
+
+
+
+// so the flow looks like--
+1. user registers with some data
+2. server saves the registered data into DB
+3. server creates a token and gives it to the user
+4. whenever user signs again with the server his unique token is also recieved which was created earlier to authenticate who is the user based on the token.
