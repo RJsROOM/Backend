@@ -1,0 +1,16 @@
+//iska kaam: user schema bnana or user models bnana
+
+const mongoose= require('mongoose');
+
+const userSchema= new mongoose.Schema({
+    name: String,
+    email:{
+        type: String,
+        unique: [true, 'email already exists']
+    },
+    password: String,
+})
+
+const userModel= mongoose.model("user", userSchema);
+
+module.exports= userModel;
