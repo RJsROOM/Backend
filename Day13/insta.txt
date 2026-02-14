@@ -1,0 +1,22 @@
+==>Authentication
+    =>register(1.user ka data save krna DB me 2.user ko token dena)
+    =>login
+    =>logout(token blacklisting)
+    =>[OTP based registration]
+==>post
+    =>create
+    =>can see the feed
+    =>like post
+    =>save post
+==>users
+    =>followers
+    =>following
+
+user schema={
+    username: string,
+    email: string,
+    password: string,
+    bio: string,
+    profile_pic: string,
+
+}
