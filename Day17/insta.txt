@@ -1,0 +1,31 @@
+==>Authentication
+    =>register(1.user ka data save krna DB me 2.user ko token dena)
+    =>login
+    =>logout(token blacklisting)
+    =>[OTP based registration]
+==>post
+    =>create={
+        caption: string,
+        img_url: string,
+        user: userId,
+        createdAt: date-time
+    }
+    =>can see the feed
+    =>like post
+    =>save post
+==>users
+    =>followers
+    =>following
+
+user schema={
+    username: string,
+    email: string,
+    password: string,
+    bio: string,
+    profile_pic: string,
+
+}
+
+since storing files of posts requires some space and utilizing the psace in our own server costs us heavily so to prevent the costing and making it little more cheaper we use CLOUD STORAGE PROVIDERS like(s3 of AWS, imagekit.io, coudinaeryk).
+
+for the reason that our express can read any files recieved from the frontend we use MULTER package. and using memoryStorage in multer helps in storing our image fies in th server for a little time until our files reach to oiur cloud storage and when the files gets uploaded on the coud storage the server removes the files from there.
